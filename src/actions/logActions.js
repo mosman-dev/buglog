@@ -14,7 +14,9 @@ export const getLogs = () => async (dispatch) => {
 	try {
 		setLoading();
 
-		const res = await fetch('/logs');
+		const res = await fetch(
+			'https://my-json-server.typicode.com/mosman-dev/buglog-db/logs'
+		);
 		const data = await res.json();
 
 		dispatch({
@@ -36,13 +38,16 @@ export const addLog = (log) => async (dispatch) => {
 		setLoading();
 
 		// @@ Making post request
-		const res = await fetch('/logs', {
-			method: 'POST',
-			body: JSON.stringify(log),
-			headers: {
-				'Content-Type': 'application/json',
-			},
-		});
+		const res = await fetch(
+			'https://my-json-server.typicode.com/mosman-dev/buglog-db/logs',
+			{
+				method: 'POST',
+				body: JSON.stringify(log),
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			}
+		);
 		const data = await res.json();
 
 		dispatch({
@@ -63,9 +68,12 @@ export const deleteLog = (id) => async (dispatch) => {
 	try {
 		setLoading();
 
-		await fetch(`/logs/${id}`, {
-			method: 'DELETE',
-		});
+		await fetch(
+			`https://my-json-server.typicode.com/mosman-dev/buglog-db/logs/${id}`,
+			{
+				method: 'DELETE',
+			}
+		);
 
 		dispatch({
 			type: DELETE_LOGS,
@@ -85,13 +93,16 @@ export const updateLog = (log) => async (dispatch) => {
 	try {
 		setLoading();
 
-		const res = await fetch(`/logs/${log.id}`, {
-			method: 'PUT',
-			body: JSON.stringify(log),
-			headers: {
-				'Content-Type': 'application/json',
-			},
-		});
+		const res = await fetch(
+			`https://my-json-server.typicode.com/mosman-dev/buglog-db/logs/${log.id}`,
+			{
+				method: 'PUT',
+				body: JSON.stringify(log),
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			}
+		);
 		const data = await res.json();
 
 		dispatch({
@@ -112,7 +123,9 @@ export const searchLogs = (text) => async (dispatch) => {
 	try {
 		setLoading();
 
-		const res = await fetch(`/logs?q=${text}`); // json-server search functionality (adding ?q=text query parameter)
+		const res = await fetch(
+			`https://my-json-server.typicode.com/mosman-dev/buglog-db/logs?q=${text}`
+		); // json-server search functionality (adding ?q=text query parameter)
 		const data = await res.json();
 
 		dispatch({
