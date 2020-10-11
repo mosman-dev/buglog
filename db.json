@@ -1,0 +1,42 @@
+{
+	"logs": [
+		{
+			"id": 1,
+			"message": "Changed network card at #0000",
+			"attention": false,
+			"tech": "Mary Wilson",
+			"date": "2020-10-04T02:01:52.726Z"
+		},
+		{
+			"id": 2,
+			"message": "Fixed HD in workstation 002",
+			"attention": false,
+			"tech": "Janine Westwood",
+			"date": "2020-08-02T05:49:25.162Z"
+		},
+		{
+			"message": "1122 wireless down",
+			"attention": true,
+			"tech": "Chidi Anagonye",
+			"date": "2020-08-01T03:35:59.989Z",
+			"id": 3
+		}
+	],
+	"techs": [
+		{
+			"id": 1,
+			"firstName": "Mary",
+			"lastName": "Wilson"
+		},
+		{
+			"id": 2,
+			"firstName": "Janine",
+			"lastName": "Westwood"
+		},
+		{
+			"id": 3,
+			"firstName": "Chidi",
+			"lastName": "Anagonye"
+		}
+	]
+}
