@@ -1,6 +1,5 @@
 {
 	"name": "buglog",
-	"homepage": "https://github.com/mosman-dev/buglog",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
